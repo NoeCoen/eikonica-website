@@ -1,0 +1,28 @@
+.title-container {
+  height: 480px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.eikoncia-title {
+  z-index: 10;
+  height: 250px;
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  margin-bottom: -125px;
+  margin-right: -585.615px;
+}
+
+.background-video {
+  opacity: 30%;
+  z-index: -1;
+}
+
+.front-text {
+  font-family: "Akshar", sans-serif;
+  margin: 115px 0;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
