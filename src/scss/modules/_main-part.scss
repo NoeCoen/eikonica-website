@@ -1,0 +1,150 @@
+.gif-border {
+  position: relative;
+  width: 2000px;
+  height: 400px;
+  overflow: hidden;
+  right: 50px;
+  margin-top: -120px;
+  margin-bottom: 300px;
+}
+
+.gif-border img {
+  position: absolute;
+  top: -355px;
+  filter: drop-shadow(0px 0px 20px black);
+  z-index: 2;
+}
+
+.container-gif-border {
+  position: absolute;
+}
+
+.main-part {
+  position: relative;
+  height: 1000px;
+}
+
+.container-content-main-part {
+  position: absolute;
+}
+
+.content-main-part {
+  position: relative;
+  top: 310px;
+}
+
+.content-main-part h2 {
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.content-main-part p {
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 0.3px;
+  height: 240px;
+}
+
+.content-main-part a {
+  font-family: "Akshar", sans-serif;
+  font-size: 40px;
+  position: absolute;
+}
+
+.content-main-part a::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  left: -70px;
+  height: 15px;
+  width: 400px;
+  background-image: url(../img/fond-reservation.png);
+  background-size: 250px;
+  z-index: -1;
+}
+
+.main-part-date {
+  position: absolute;
+  right: 0px;
+  font-family: "Saira Extra Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  top: 40px;
+}
+
+@media (max-width: 1700px) {
+  .main-part-date {
+    top: 80px;
+  }
+}
+.main-part-date::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -60;
+  height: 50px;
+  width: 400px;
+  background-image: url(../img/fond-date.png);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 80%;
+}
+
+.main-part-img-container {
+  top: 70px;
+  left: -100px;
+  height: 570px;
+  width: 2200px;
+  position: absolute;
+  transform: rotate(-11deg);
+  z-index: -2;
+  overflow: hidden;
+}
+
+.border-blur {
+  left: -100px;
+  height: 570px;
+  width: 2200px;
+  position: absolute;
+  z-index: 20;
+  border: solid 5px black;
+  filter: blur(5px);
+}
+
+.main-part-img-vr {
+  height: 600px;
+  position: absolute;
+  top: 60px;
+  left: 750px;
+}
+
+.main-part-img-pr {
+  height: 600px;
+  position: absolute;
+  top: 0px;
+  left: 750px;
+}
+
+.tte-reservations-btn {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 40px;
+  letter-spacing: 4px;
+  position: relative;
+}
+
+.tte-reservations-btn::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+  height: 60px;
+  width: 850px;
+  top: -5px;
+  left: -20px;
+  background-image: url(../img/smyle.png);
+  background-repeat: no-repeat;
+  background-size: 900px;
+}
