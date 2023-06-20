@@ -1,3 +1,205 @@
-.site-parameters {
-  background-color: red;
+.site-parameter {
+  background-color: black;
+  background-image: url(../img/image-fond-eikon.png);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 70px;
+  //   height: 680;
+  width: 50%;
+  position: fixed;
+  margin-top: 150px;
+  left: 25%;
+  z-index: 100;
+  font-family: "Akshar", sans-serif;
+  font-size: 40px;
+  padding: 30px 0;
+}
+
+.site-parameter h1 {
+  width: 450px;
+  margin: auto;
+}
+
+.parameter-option-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 75px 0 60px;
+}
+
+.parameter-option-container p {
+  margin: 40px 60px;
+  z-index: 120;
+}
+
+.parameter-column {
+  max-width: 50%;
+}
+
+.first-column {
+  text-align: left;
+}
+
+.second-column {
+  text-align: right;
+}
+
+.validation-btn {
+  position: relative;
+  justify-self: right;
+  margin-left: 75%;
+}
+
+.validation-btn::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 130%;
+  height: 100%;
+  background-image: url(../img/smyle.png);
+  background-size: 300px;
+  background-repeat: no-repeat;
+  right: 0;
+  z-index: -1;
+}
+
+.para-francais::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 210px;
+  height: 50px;
+  left: 0;
+  background-image: url(../img/fond-date.png);
+  background-size: 300px;
+  z-index: -1;
+  opacity: 80%;
+}
+
+.para-mode-sombre::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 290px;
+  height: 50px;
+  left: 0;
+  background-image: url(../img/fond-date.png);
+  background-size: 300px;
+  z-index: -1;
+  opacity: 80%;
+}
+
+.para-animation::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 250px;
+  height: 50px;
+  left: 0;
+  background-image: url(../img/fond-date.png);
+  background-size: 300px;
+  z-index: -1;
+  opacity: 80%;
+}
+
+.para-deutsch::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 210px;
+  height: 50px;
+  right: 0;
+  background-image: url(../img/fond-date.png);
+  background-size: 300px;
+  z-index: -1;
+  opacity: 80%;
+}
+
+.para-mode-clair::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 250px;
+  height: 50px;
+  right: 0;
+  background-image: url(../img/fond-date.png);
+  background-size: 300px;
+  z-index: -1;
+  opacity: 80%;
+}
+
+.para-animation-reduites::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 430px;
+  height: 50px;
+  top: 425px;
+  right: 0;
+  background-image: url(../img/fond-date.png);
+  background-size: 300px;
+  z-index: -1;
+  opacity: 80%;
+}
+
+@media (max-width: 1865px) {
+  .para-animation-reduites::after {
+    height: 100px;
+    width: 270px;
+  }
+}
+
+.graphic-back-parameter {
+  width: 150%;
+  height: 150%;
+  background-color: white;
+  z-index: 50;
+  opacity: 20%;
+  position: fixed;
+  left: -30px;
+  backdrop-filter: blur(100px);
+}
+
+.cri-4-para {
+  position: fixed;
+  top: 12%;
+  left: 24%;
+  width: 60%;
+  z-index: 55;
+}
+
+.fond-eikon-para {
+  display: none;
+}
+
+.graphic-top-parameter {
+  z-index: 150;
+}
+
+.grille-2-para {
+  position: fixed;
+  z-index: 150;
+  transform: rotate(-90deg);
+  width: 700px;
+  left: 240px;
+  top: -150px;
+  opacity: 60%;
+}
+
+.gif-border-para {
+  position: fixed;
+  top: 440px;
+  z-index: 150;
+}
+
+.para-close {
+  display: none;
+}
+
+.unselected {
+  display: none;
+}
+
+.para-unselected {
+  color: #808080;
 }
