@@ -1,6 +1,7 @@
 .graphic-element-back {
   position: absolute;
   z-index: -10;
+  pointer-events: none;
 }
 
 .exagone {

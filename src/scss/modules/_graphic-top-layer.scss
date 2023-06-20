@@ -1,6 +1,7 @@
 .graphic-element-top {
   position: absolute;
   z-index: 10;
+  pointer-events: none;
 }
 
 .a-letter {

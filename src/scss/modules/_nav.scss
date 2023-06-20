@@ -18,3 +18,13 @@
   border: 0px;
   background-color: red;
 }
+
+.parameter-gear,
+.flex-nav-container p {
+  transition: all ease-in-out 0.2s;
+}
+
+.parameter-gear:hover,
+.flex-nav-container p:hover {
+  transform: scale(1.1);
+}

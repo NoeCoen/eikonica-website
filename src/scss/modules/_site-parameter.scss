@@ -61,6 +61,12 @@
   background-repeat: no-repeat;
   right: 0;
   z-index: -1;
+  opacity: 0.6;
+  transition: all ease-in-out 0.2s;
+}
+
+.validation-btn:hover::after {
+  opacity: 1;
 }
 
 .para-francais::after {
@@ -89,7 +95,7 @@
   opacity: 80%;
 }
 
-.para-animation::after {
+.para-animations::after {
   content: "";
   position: absolute;
   display: inline-block;
@@ -128,7 +134,7 @@
   opacity: 80%;
 }
 
-.para-animation-reduites::after {
+.para-animations-reduite::after {
   content: "";
   position: absolute;
   display: inline-block;
@@ -143,7 +149,7 @@
 }
 
 @media (max-width: 1865px) {
-  .para-animation-reduites::after {
+  .para-animations-reduite::after {
     height: 100px;
     width: 270px;
   }
@@ -158,6 +164,7 @@
   position: fixed;
   left: -30px;
   backdrop-filter: blur(100px);
+  pointer-events: none;
 }
 
 .cri-4-para {
@@ -174,6 +181,7 @@
 
 .graphic-top-parameter {
   z-index: 150;
+  pointer-events: none;
 }
 
 .grille-2-para {
@@ -190,16 +198,46 @@
   position: fixed;
   top: 440px;
   z-index: 150;
+  pointer-events: none;
 }
 
 .para-close {
   display: none;
+  opacity: 0;
+  pointer-events: none;
 }
 
-.unselected {
+.para-open {
+  display: block;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.not-visible {
   display: none;
 }
 
-.para-unselected {
+.para-francais-unselected,
+.para-mode-sombre-unselected,
+.para-animations-unselected,
+.para-deutsch-unselected,
+.para-mode-clair-unselected,
+.para-animations-reduite-unselected {
   color: #808080;
+  transition: all ease-in-out 0.2s;
+}
+
+.para-francais-unselected:hover,
+.para-mode-sombre-unselected:hover,
+.para-animations-unselected:hover,
+.para-deutsch-unselected:hover,
+.para-mode-clair-unselected:hover,
+.para-animations-reduite-unselected:hover {
+  color: white;
+}
+
+.global-parameter {
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
