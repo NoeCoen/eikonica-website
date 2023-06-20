@@ -21,6 +21,11 @@ var unselectedAnimationReduite = document.querySelector(
   ".para-animations-reduite-unselected"
 );
 
+var graphicBackLayer = document.getElementById("graphic-back-layer");
+var graphicTopLayer = document.querySelector(".graphic-top-layer");
+var graphicExagone = document.querySelector(".exagone");
+var value = window.scrollY;
+
 //
 
 var closeMenu = function () {
@@ -91,3 +96,12 @@ var selectAnimationReduite = function () {
 
 unselectedAnimation.addEventListener("click", selectAnimation);
 unselectedAnimationReduite.addEventListener("click", selectAnimationReduite);
+
+//
+
+var paralaxEffect = function () {
+  var translateY = value * 0.5;
+  graphicExagone.style.transform = "translateY(" + translateY + "px)";
+};
+
+window.addEventListener("scroll", paralaxEffect);
