@@ -44,10 +44,18 @@ video {
 // ==================================== */
 
 body {
-  color: white;
-  background-color: black;
   padding: 0 30px;
   font-size: 20px;
   letter-spacing: 2px;
   overflow-x: hidden;
+}
+
+.body-mode-sombre {
+  background-color: black;
+  color: white;
+}
+
+.body-mode-clair {
+  background-color: white;
+  color: black;
 }

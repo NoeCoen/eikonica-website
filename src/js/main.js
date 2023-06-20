@@ -13,6 +13,9 @@ var unselectedModeSombre = document.querySelector(
 );
 var modeClair = document.querySelector(".para-mode-clair");
 var unselectedModeClair = document.querySelector(".para-mode-clair-unselected");
+var invertedElement = document.querySelector(".inverted-element");
+var allSite = document.querySelector(".all-site");
+var allBackground = document.querySelector(".main-part-img-container");
 
 var animation = document.querySelector(".para-animations");
 var unselectedAnimation = document.querySelector(".para-animations-unselected");
@@ -66,6 +69,11 @@ var selectModeSombre = function () {
   unselectedModeSombre.classList.add("not-visible");
   modeClair.classList.add("not-visible");
   unselectedModeClair.classList.remove("not-visible");
+  invertedElement.classList.remove("inverted");
+  allSite.classList.remove("body-mode-clair");
+  allSite.classList.add("body-mode-sombre");
+  allBackground.classList.remove("body-mode-clair");
+  allBackground.classList.add("body-mode-sombre");
 };
 
 var selectModeClair = function () {
@@ -73,6 +81,11 @@ var selectModeClair = function () {
   unselectedModeSombre.classList.remove("not-visible");
   modeClair.classList.remove("not-visible");
   unselectedModeClair.classList.add("not-visible");
+  invertedElement.classList.add("inverted");
+  allSite.classList.add("body-mode-clair");
+  allSite.classList.remove("body-mode-sombre");
+  allBackground.classList.add("body-mode-clair");
+  allBackground.classList.remove("body-mode-sombre");
 };
 
 unselectedModeSombre.addEventListener("click", selectModeSombre);
