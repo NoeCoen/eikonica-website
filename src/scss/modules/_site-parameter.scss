@@ -1,5 +1,6 @@
 .site-parameter {
   background-color: black;
+  color: white;
   background-image: url(../img/image-fond-eikon.png);
   background-size: 600px;
   background-repeat: no-repeat;
@@ -13,6 +14,7 @@
   font-family: "Akshar", sans-serif;
   font-size: 40px;
   padding: 30px 0;
+  transition: all ease-in-out 0.2s;
 }
 
 .site-parameter h1 {
@@ -160,19 +162,20 @@
   height: 150%;
   background-color: white;
   z-index: 50;
-  opacity: 20%;
+  opacity: 0.2;
   position: fixed;
   left: -30px;
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   pointer-events: none;
 }
 
 .cri-4-para {
   position: fixed;
-  top: 12%;
-  left: 24%;
-  width: 60%;
-  z-index: 55;
+  top: 100px;
+  left: 15%;
+  width: 40%;
+  z-index: 90;
 }
 
 .fond-eikon-para {
@@ -237,7 +240,5 @@
 }
 
 .global-parameter {
-  transition-property: opacity;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
+  transition: all ease-in-out 0.2s;
 }

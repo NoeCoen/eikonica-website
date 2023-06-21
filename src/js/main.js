@@ -1,6 +1,7 @@
 var validationButton = document.querySelector(".validation-btn");
 var menu = document.querySelector(".global-parameter");
 var openMenuTrigger = document.querySelector(".parameter-gear");
+var toblur = document.querySelectorAll(".to-blur");
 
 var francais = document.querySelector(".para-francais");
 var unselectedFrancais = document.querySelector(".para-francais-unselected");
@@ -14,6 +15,9 @@ var unselectedModeSombre = document.querySelector(
 var modeClair = document.querySelector(".para-mode-clair");
 var unselectedModeClair = document.querySelector(".para-mode-clair-unselected");
 var invertedElement = document.querySelector(".inverted-element");
+var resetZBack = document.querySelector(".z-back");
+var resetZMid = document.querySelector(".z-mid");
+var resetZTop = document.querySelector(".z-top");
 var allSite = document.querySelector(".all-site");
 var allBackground = document.querySelector(".main-part-img-container");
 
@@ -34,10 +38,17 @@ var value = window.scrollY;
 var closeMenu = function () {
   menu.classList.add("para-close");
   menu.classList.remove("para-open");
+  for (var i = 0; i < toblur.length; i++) {
+    toblur[i].classList.remove("blured");
+  }
 };
+
 var openMenu = function () {
   menu.classList.remove("para-close");
   menu.classList.add("para-open");
+  for (var i = 0; i < toblur.length; i++) {
+    toblur[i].classList.add("blured");
+  }
 };
 
 validationButton.addEventListener("click", closeMenu);
@@ -86,6 +97,9 @@ var selectModeClair = function () {
   allSite.classList.remove("body-mode-sombre");
   allBackground.classList.add("body-mode-clair");
   allBackground.classList.remove("body-mode-sombre");
+  resetZBack.classList.add("reset-z-back");
+  resetZMid.classList.add("reset-z-mid");
+  resetZTop.classList.add("reset-z-top");
 };
 
 unselectedModeSombre.addEventListener("click", selectModeSombre);

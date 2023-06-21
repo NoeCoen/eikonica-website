@@ -59,3 +59,19 @@ body {
   background-color: white;
   color: black;
 }
+
+.reset-z-back {
+  z-index: -100;
+}
+
+.reset-z-mid {
+  z-index: -100;
+}
+
+.reset-z-top {
+  z-index: -100;
+}
+
+.blured {
+  filter: blur(10px);
+}
