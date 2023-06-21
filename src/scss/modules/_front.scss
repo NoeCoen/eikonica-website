@@ -7,12 +7,17 @@
 
 .eikoncia-title {
   z-index: 10;
-  height: 250px;
   position: absolute;
-  right: 50%;
-  bottom: 50%;
-  margin-bottom: -125px;
-  margin-right: -585.615px;
+  height: 100%;
+  width: 100%;
+  right: 0px;
+  bottom: 0px;
+}
+
+.eikoncia-title img {
+  width: 80%;
+  margin: 90px 10%;
+  position: relative;
 }
 
 .background-video {
@@ -23,4 +28,8 @@
 .front-text {
   font-family: "Akshar", sans-serif;
   margin: 115px 0;
+}
+
+.eikonica-clair {
+  filter: invert(1);
 }

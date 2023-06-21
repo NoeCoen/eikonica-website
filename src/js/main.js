@@ -19,7 +19,13 @@ var resetZBack = document.querySelector(".z-back");
 var resetZMid = document.querySelector(".z-mid");
 var resetZTop = document.querySelector(".z-top");
 var allSite = document.querySelector(".all-site");
-var allBackground = document.querySelector(".main-part-img-container");
+var allBackground = document.querySelectorAll(".main-part-img-container");
+var mainPartImgClair = document.querySelectorAll(".main-part-img-clair");
+var mainPartImgSombre = document.querySelectorAll(".main-part-img-sombre");
+var PartenaireSombre = document.querySelectorAll(".partenaires-sombre");
+var PartenaireClair = document.querySelectorAll(".partenaires-clair");
+var eikonicaSombre = document.querySelector(".eikonica-sombre");
+var eikonicaClair = document.querySelector(".eikonica-clair");
 
 var animation = document.querySelector(".para-animations");
 var unselectedAnimation = document.querySelector(".para-animations-unselected");
@@ -80,27 +86,77 @@ var selectModeSombre = function () {
   unselectedModeSombre.classList.add("not-visible");
   modeClair.classList.add("not-visible");
   unselectedModeClair.classList.remove("not-visible");
+  for (var i = 0; i < mainPartImgClair.length; i++) {
+    mainPartImgClair[i].classList.add("img-not-visible");
+  }
+  for (var i = 0; i < mainPartImgSombre.length; i++) {
+    mainPartImgSombre[i].classList.remove("img-not-visible");
+  }
+  for (var i = 0; i < PartenaireClair.length; i++) {
+    PartenaireClair[i].classList.add("img-not-visible");
+  }
+  for (var i = 0; i < PartenaireSombre.length; i++) {
+    PartenaireSombre[i].classList.remove("img-not-visible");
+  }
+  eikonicaSombre.classList.remove("img-not-visible");
+  eikonicaClair.classList.add("img-not-visible");
   invertedElement.classList.remove("inverted");
   allSite.classList.remove("body-mode-clair");
   allSite.classList.add("body-mode-sombre");
-  allBackground.classList.remove("body-mode-clair");
-  allBackground.classList.add("body-mode-sombre");
+  for (var i = 0; i < allBackground.length; i++) {
+    allBackground[i].classList.remove("body-mode-clair");
+  }
+  for (var i = 0; i < allBackground.length; i++) {
+    allBackground[i].classList.add("body-mode-sombre");
+  }
 };
 
+function resetZIndex() {
+  console.log("etape 3");
+  resetZBack.classList.add("reset-z-back");
+  resetZMid.classList.add("reset-z-mid");
+  resetZTop.classList.add("reset-z-top");
+}
+
 var selectModeClair = function () {
+  console.log("etape 1");
   modeSombre.classList.add("not-visible");
   unselectedModeSombre.classList.remove("not-visible");
   modeClair.classList.remove("not-visible");
   unselectedModeClair.classList.add("not-visible");
+  for (var i = 0; i < mainPartImgClair.length; i++) {
+    mainPartImgClair[i].classList.remove("img-not-visible");
+  }
+  for (var i = 0; i < mainPartImgSombre.length; i++) {
+    mainPartImgSombre[i].classList.add("img-not-visible");
+  }
+  for (var i = 0; i < PartenaireClair.length; i++) {
+    PartenaireClair[i].classList.remove("img-not-visible");
+  }
+  for (var i = 0; i < PartenaireSombre.length; i++) {
+    PartenaireSombre[i].classList.add("img-not-visible");
+  }
+  eikonicaSombre.classList.add("img-not-visible");
+  eikonicaClair.classList.remove("img-not-visible");
   invertedElement.classList.add("inverted");
   allSite.classList.add("body-mode-clair");
   allSite.classList.remove("body-mode-sombre");
-  allBackground.classList.add("body-mode-clair");
-  allBackground.classList.remove("body-mode-sombre");
+  for (var i = 0; i < allBackground.length; i++) {
+    allBackground[i].classList.add("body-mode-clair");
+  }
+  for (var i = 0; i < allBackground.length; i++) {
+    allBackground[i].classList.remove("body-mode-sombre");
+  }
+  console.log("etape 2");
+  resetZIndex();
+};
+
+function resetZIndex() {
+  console.log("etape 3");
   resetZBack.classList.add("reset-z-back");
   resetZMid.classList.add("reset-z-mid");
   resetZTop.classList.add("reset-z-top");
-};
+}
 
 unselectedModeSombre.addEventListener("click", selectModeSombre);
 unselectedModeClair.addEventListener("click", selectModeClair);

@@ -53,23 +53,28 @@ body {
 .body-mode-sombre {
   background-color: black;
   color: white;
+  position: absolute;
 }
 
 .body-mode-clair {
   background-color: white;
   color: black;
+  position: absolute;
 }
 
 .reset-z-back {
   z-index: -100;
+  position: relative;
 }
 
 .reset-z-mid {
-  z-index: -100;
+  z-index: 0;
+  position: relative;
 }
 
 .reset-z-top {
-  z-index: -100;
+  z-index: 100;
+  position: relative;
 }
 
 .blured {

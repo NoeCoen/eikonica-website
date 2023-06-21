@@ -5,7 +5,6 @@
   background-size: 600px;
   background-repeat: no-repeat;
   background-position: 70px;
-  //   height: 680;
   width: 50%;
   position: fixed;
   margin-top: 150px;
@@ -20,6 +19,10 @@
 .site-parameter h1 {
   width: 450px;
   margin: auto;
+}
+
+.site-parameter h1 img {
+  width: 100%;
 }
 
 .parameter-option-container {
@@ -165,8 +168,6 @@
   opacity: 0.2;
   position: fixed;
   left: -30px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   pointer-events: none;
 }
 
@@ -205,15 +206,17 @@
 }
 
 .para-close {
-  display: none;
+  display: block;
   opacity: 0;
   pointer-events: none;
+  transition: all ease-in-out 0.2s;
 }
 
 .para-open {
   display: block;
   opacity: 1;
   pointer-events: all;
+  transition: all ease-in-out 0.2s;
 }
 
 .not-visible {

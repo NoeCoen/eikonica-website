@@ -2,6 +2,7 @@
   height: 50px;
   margin: 80px auto 50px;
   transition: all ease-in-out 0.2s;
+  color: transparent;
 }
 
 .partenaires:hover {
@@ -37,4 +38,8 @@ footer {
 
 .politique-de-confidentialite:hover {
   font-size: 21px;
+}
+
+.partenaires-clair {
+  filter: invert(1);
 }

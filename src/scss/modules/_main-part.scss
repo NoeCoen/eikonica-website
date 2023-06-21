@@ -1,11 +1,11 @@
 .gif-border {
   position: relative;
   width: 2000px;
-  height: 400px;
+  height: 450px;
   overflow: hidden;
   right: 50px;
   margin-top: -120px;
-  margin-bottom: 300px;
+  margin-bottom: 250px;
   pointer-events: none;
 }
 
@@ -13,7 +13,7 @@
   position: absolute;
   top: -355px;
   filter: drop-shadow(0px 0px 20px black);
-  z-index: 2;
+  z-index: 20;
 }
 
 .container-gif-border {
@@ -111,6 +111,14 @@
   transform: rotate(-11deg);
   z-index: -2;
   overflow: hidden;
+}
+
+.main-part-img-clair {
+  filter: invert(1);
+}
+
+.img-not-visible {
+  display: none;
 }
 
 .border-blur {
