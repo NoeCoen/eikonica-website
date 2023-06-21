@@ -26,6 +26,7 @@ var PartenaireSombre = document.querySelectorAll(".partenaires-sombre");
 var PartenaireClair = document.querySelectorAll(".partenaires-clair");
 var eikonicaSombre = document.querySelector(".eikonica-sombre");
 var eikonicaClair = document.querySelector(".eikonica-clair");
+var degradeBottom = document.querySelectorAll(".degrade-bottom");
 
 var animation = document.querySelector(".para-animations");
 var unselectedAnimation = document.querySelector(".para-animations-unselected");
@@ -103,6 +104,12 @@ var selectModeSombre = function () {
   invertedElement.classList.remove("inverted");
   allSite.classList.remove("body-mode-clair");
   allSite.classList.add("body-mode-sombre");
+  for (var i = 0; i < degradeBottom.length; i++) {
+    degradeBottom[i].classList.add("body-mode-sombre");
+  }
+  for (var i = 0; i < degradeBottom.length; i++) {
+    degradeBottom[i].classList.remove("body-mode-clair");
+  }
   for (var i = 0; i < allBackground.length; i++) {
     allBackground[i].classList.remove("body-mode-clair");
   }
@@ -141,6 +148,12 @@ var selectModeClair = function () {
   invertedElement.classList.add("inverted");
   allSite.classList.add("body-mode-clair");
   allSite.classList.remove("body-mode-sombre");
+  for (var i = 0; i < degradeBottom.length; i++) {
+    degradeBottom[i].classList.remove("body-mode-sombre");
+  }
+  for (var i = 0; i < degradeBottom.length; i++) {
+    degradeBottom[i].classList.add("body-mode-clair");
+  }
   for (var i = 0; i < allBackground.length; i++) {
     allBackground[i].classList.add("body-mode-clair");
   }
@@ -181,10 +194,3 @@ unselectedAnimation.addEventListener("click", selectAnimation);
 unselectedAnimationReduite.addEventListener("click", selectAnimationReduite);
 
 //
-
-var paralaxEffect = function () {
-  var translateY = value * 0.5;
-  graphicExagone.style.transform = "translateY(" + translateY + "px)";
-};
-
-window.addEventListener("scroll", paralaxEffect);

@@ -22,3 +22,23 @@
   top: 2540px;
   right: -30px;
 }
+
+.degrade-bottom {
+  position: fixed;
+  width: 200%;
+  height: 100px;
+  bottom: 0px;
+  z-index: 200;
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.degrade-top {
+  position: fixed;
+  width: 200%;
+  height: 100px;
+  top: 0px;
+  z-index: 200;
+  filter: blur(100px);
+  pointer-events: none;
+}
