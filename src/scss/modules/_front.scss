@@ -3,6 +3,7 @@
   width: 100%;
   overflow: hidden;
   position: relative;
+  pointer-events: none;
 }
 
 .eikoncia-title {
@@ -23,6 +24,9 @@
 .background-video {
   opacity: 30%;
   z-index: -1;
+  width: 100%;
+  position: relative;
+  bottom: 250px;
 }
 
 .front-text {
